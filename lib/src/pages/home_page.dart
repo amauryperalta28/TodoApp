@@ -53,13 +53,6 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //   '02 : 00 PM',
-                  //   style: TextStyle(
-                  //       fontSize: 35.0,
-                  //       color: Colors.white.withOpacity(0.6),
-                  //       fontWeight: FontWeight.bold),
-                  // ),
                   Column(
                     children: [
                       DigitalClock(
