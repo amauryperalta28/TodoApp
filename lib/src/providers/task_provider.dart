@@ -7,7 +7,7 @@ import 'package:todo_app/src/models/task_model.dart';
 
 class TaskProvider with ChangeNotifier {
   List<Task> _tasks;
-  String _baseUrl = "";
+  String _baseUrl = "https://todoapp-9df4e-default-rtdb.firebaseio.com";
 
   TaskProvider() {
     _tasks = [];

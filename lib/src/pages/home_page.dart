@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'package:todo_app/src/models/task_model.dart';
 import 'package:todo_app/src/pages/create_task_page.dart';
 import 'package:todo_app/src/pages/theme.dart';
@@ -52,14 +53,32 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '02 : 00 PM',
-                    style: TextStyle(
-                        fontSize: 35.0,
-                        color: Colors.white.withOpacity(0.6),
-                        fontWeight: FontWeight.bold),
+                  // Text(
+                  //   '02 : 00 PM',
+                  //   style: TextStyle(
+                  //       fontSize: 35.0,
+                  //       color: Colors.white.withOpacity(0.6),
+                  //       fontWeight: FontWeight.bold),
+                  // ),
+                  Column(
+                    children: [
+                      DigitalClock(
+                        showSecondsDigit: false,
+                        digitAnimationStyle: Curves.elasticOut,
+                        is24HourTimeFormat: false,
+                        areaDecoration: BoxDecoration(
+                          color: Colors.transparent,
+                        ),
+                        hourMinuteDigitTextStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50,
+                        ),
+                        amPmDigitTextStyle: TextStyle(
+                            color: Colors.blueGrey,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
-                  
                 ],
               ),
             ),
